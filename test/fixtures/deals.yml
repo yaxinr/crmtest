@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  responsible: 1
+  crm_contact: 
+  bid_currency: MyString
+  bid_value: 9.99
+  bid_type: 1
+  deal_milestone: 1
+  tenant: 
+  expected_close_date: 2012-06-24 19:57:31
+  per_period_value: 1
+  deal_milestone_probability: 1
+  actual_close_date: 2012-06-24 19:57:31
+
+two:
+  title: MyString
+  description: MyText
+  responsible: 1
+  crm_contact: 
+  bid_currency: MyString
+  bid_value: 9.99
+  bid_type: 1
+  deal_milestone: 1
+  tenant: 
+  expected_close_date: 2012-06-24 19:57:31
+  per_period_value: 1
+  deal_milestone_probability: 1
+  actual_close_date: 2012-06-24 19:57:31

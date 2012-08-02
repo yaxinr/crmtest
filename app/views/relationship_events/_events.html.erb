@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Category</th>
+    <th>Data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<%= render @EntityObject.relationship_events %>
+</table>
+
+<h2>Add event:</h2>
+<%= render "relationship_events/form" %>

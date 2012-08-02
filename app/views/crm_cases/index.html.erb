@@ -1,0 +1,27 @@
+<h1>Listing crm_cases</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Isclosed</th>
+    <th>Tenant</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @crm_cases.each do |crm_case| %>
+  <tr>
+    <td><%= crm_case.title %></td>
+    <td><%= crm_case.isClosed %></td>
+    <td><%= crm_case.tenant_id %></td>
+    <td><%= link_to 'Show', crm_case %></td>
+    <td><%= link_to 'Edit', edit_crm_case_path(crm_case) %></td>
+    <td><%= link_to 'Destroy', crm_case, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Crm case', new_crm_case_path %>

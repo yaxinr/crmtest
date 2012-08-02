@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Crm contact:</b>
+  <%= @relationship_event.crm_contact %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @relationship_event.content %>
+</p>
+
+<p>
+  <b>Tenant:</b>
+  <%= @relationship_event.tenant %>
+</p>
+
+<p>
+  <b>Entity type:</b>
+  <%= @relationship_event.entity_type %>
+</p>
+
+<p>
+  <b>Entityreference:</b>
+  <%= @relationship_event.entity %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @relationship_event.category %>
+</p>
+
+<p>
+  <b>Have files:</b>
+  <%= @relationship_event.have_files %>
+</p>
+
+
+<%= link_to 'Edit', edit_relationship_event_path(@relationship_event) %> |
+<%= link_to 'Back', relationship_events_path %>

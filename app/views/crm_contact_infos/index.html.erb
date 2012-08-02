@@ -1,0 +1,33 @@
+<h1>Listing crm_contact_infos</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Category</th>
+    <th>Tenant</th>
+    <th>Is primary</th>
+    <th>Contact</th>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @crm_contact_infos.each do |crm_contact_info| %>
+  <tr>
+    <td><%= crm_contact_info.data %></td>
+    <td><%= crm_contact_info.category_id %></td>
+    <td><%= crm_contact_info.tenant_id %></td>
+    <td><%= crm_contact_info.is_primary %></td>
+    <td><%= crm_contact_info.contact_id %></td>
+    <td><%= crm_contact_info.type_id %></td>
+    <td><%= link_to 'Show', crm_contact_info %></td>
+    <td><%= link_to 'Edit', edit_crm_contact_info_path(crm_contact_info) %></td>
+    <td><%= link_to 'Destroy', crm_contact_info, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Crm contact info', new_crm_contact_info_path %>

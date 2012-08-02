@@ -1,0 +1,65 @@
+<%= form_for(case when @EntityObject then [@EntityObject, @EntityObject.deals.build] else @deal end, :remote =>  (@EntityObject != nil)) do |f| %>
+  <% if @deal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deal.errors.count, "error") %> prohibited this deal from being saved:</h2>
+
+      <ul>
+      <% @deal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :responsible %><br />
+    <%= f.number_field :responsible %>
+  </div>
+  <div class="field">
+    <%= f.label :crm_contact %><br />
+    <%= f.text_field :crm_contact_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bid_currency %><br />
+    <%= f.text_field :bid_currency %>
+  </div>
+  <div class="field">
+    <%= f.label :bid_value %><br />
+    <%= f.text_field :bid_value %>
+  </div>
+  <div class="field">
+    <%= f.label :bid_type %><br />
+    <%= f.number_field :bid_type %>
+  </div>
+  <div class="field">
+    <%= f.label :deal_milestone %><br />
+    <%= f.number_field :deal_milestone_id %>
+  </div>
+  <div class="field">
+    <%= f.label :expected_close_date %><br />
+    <%= f.datetime_select :expected_close_date %>
+  </div>
+  <div class="field">
+    <%= f.label :per_period_value %><br />
+    <%= f.number_field :per_period_value %>
+  </div>
+  <div class="field">
+    <%= f.label :deal_milestone_probability %><br />
+    <%= f.number_field :deal_milestone_probability %>
+  </div>
+  <div class="field">
+    <%= f.label :actual_close_date %><br />
+    <%= f.datetime_select :actual_close_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

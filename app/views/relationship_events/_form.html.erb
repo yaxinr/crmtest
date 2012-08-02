@@ -1,0 +1,22 @@
+<%= form_for([@EntityObject, @EntityObject.relationship_events.build], :remote => true) do |f| %>
+
+  <div class="field">
+    <%= f.label :crm_contact %><br />
+    <%= f.text_field :crm_contact_id %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.text_field :category_id %>
+  </div>
+  <div class="field">
+    <%= f.label :have_files %><br />
+    <%= f.number_field :have_files %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

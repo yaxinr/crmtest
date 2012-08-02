@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  crm_contact: 
+  content: MyText
+  tenant: 
+  entity_type: 1
+  entityreference: MyString
+  category: 
+  have_files: 1
+
+two:
+  crm_contact: 
+  content: MyText
+  tenant: 
+  entity_type: 1
+  entityreference: MyString
+  category: 
+  have_files: 1

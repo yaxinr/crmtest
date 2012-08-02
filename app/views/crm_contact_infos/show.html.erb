@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @crm_contact_info.data %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @crm_contact_info.category_id %>
+</p>
+
+<p>
+  <b>Tenant:</b>
+  <%= @crm_contact_info.tenant_id %>
+</p>
+
+<p>
+  <b>Is primary:</b>
+  <%= @crm_contact_info.is_primary %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @crm_contact_info.contact_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @crm_contact_info.type_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_crm_contact_info_path(@crm_contact_info) %> |
+<%= link_to 'Back', crm_contact_infos_path %>

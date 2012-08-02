@@ -1,0 +1,7 @@
+  <tr>
+    <td class="borderBase" style="width:40px;"> <% if task.category %> <%= task.category.title %><% end %></td>
+    <td class="borderBase" style="width:100%;"><%= task.title %></br><%= task.deadline %></td>
+    <td><% if EntityObjectByChild(task) %> <%= link_to  EntityObjectByChild(task).title, EntityObjectByChild(task) %> <% end %></td>
+    <td><%= link_to 'Edit', entity_object_path(@EntityObject) + edit_task_path(task), remote: true %></td>
+    <td><%= link_to 'Destroy', [@EntityObject, task], confirm: 'Are you sure?', method: :delete, remote: true %></td>
+  </tr>

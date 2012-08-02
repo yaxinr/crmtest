@@ -1,0 +1,14 @@
+  <tr>
+<td>
+    <%= crm_contact_info.type %>
+</td>
+<td>
+  <%= crm_contact_info.category %>
+</td>
+<td>
+  <%= crm_contact_info.data %>
+</td>
+<td>
+<%= link_to 'Delete', [@crm_contact, crm_contact_info], method: :delete, remote: true %>
+</td>
+  </tr>

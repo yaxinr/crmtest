@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_crm_contact_path(@crm_contact) %> |
+<%= link_to 'Back', crm_contacts_path %>
+
+<p>
+  <%= @crm_contact.is_company_text %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @crm_contact.title %>
+</p>
+
+<p>
+  <b>Contact type:</b>
+  <%= @crm_contact.status.title if @crm_contact.status %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @crm_contact.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @crm_contact.last_name %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @crm_contact.company.title if @crm_contact.company %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @crm_contact.notes %>
+</p>
+
+<div id="infos">
+<%= render "crm_contact_infos/list" %>
+</div>
+
+<div id="tags">
+<%= render "entity_tags/list" %>
+</div>
+
+<%= link_to "Events", (crm_contact_path(@crm_contact) +relationship_events_path), :remote => true %>
+<%= link_to "Tasks", (crm_contact_path(@crm_contact) +tasks_path), :method => "get", :remote => true %>
+<%= link_to "Opportunities", (crm_contact_path + deals_path), :method => "get", :remote => true %>
+<div id="entity_detail">
+<%= render "relationship_events/events" %>
+</div>

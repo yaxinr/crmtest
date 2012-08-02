@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Entity:</b>
+  <%= @entity_contact.entity %>
+</p>
+
+<p>
+  <b>Entitytype:</b>
+  <%= @entity_contact.EntityType %>
+</p>
+
+<p>
+  <b>Crm contact:</b>
+  <%= @entity_contact.crm_contact %>
+</p>
+
+
+<%= link_to 'Edit', edit_entity_contact_path(@entity_contact) %> |
+<%= link_to 'Back', entity_contacts_path %>

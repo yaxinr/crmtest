@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  color: MyString
+  sort_order: 1
+  title: MyString
+  description: MyText
+  probability: 1
+  status: 1
+  tenant: 
+
+two:
+  color: MyString
+  sort_order: 1
+  title: MyString
+  description: MyText
+  probability: 1
+  status: 1
+  tenant: 

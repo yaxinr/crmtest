@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data: MyText
+  category: 1
+  tenant: 
+  is_primary: 1
+  contact: 1
+  type: 1
+
+two:
+  data: MyText
+  category: 1
+  tenant: 
+  is_primary: 1
+  contact: 1
+  type: 1

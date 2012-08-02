@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crm</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= link_to "Contacts", crm_contacts_path, :class=> currentpage("crm_contacts") %>
+<%= link_to "Tasks", tasks_path, :class=> currentpage("tasks") %>
+<%= link_to "Opportunities", deals_path, :class=> currentpage("deals") %>
+<%= link_to "Cases", crm_cases_path, :class=> currentpage("crm_cases") %>
+<%= link_to "User fields", field_descriptions_path, :class=> currentpage("field_descriptions") %>
+<%= link_to "Opportunity Stages", deal_milestones_path, :class=> currentpage("deal_milestones") %>
+<%= link_to "Contact Types", list_items_path, :class=> currentpage("list_items") %>
+<%= link_to "Tasks Categories", categories_path, :class=> currentpage("categories") %>
+<%= link_to "Tags", tags_path, :class=> currentpage("tags") %>
+</br>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<%= form_for([@crm_contact, @crm_contact.crm_contact_infos.build], remote: true) do |f| %>
+
+  <tr>
+    <td>
+    <%= f.select(:type_id,ARRAY_CONTACT_INFO_TYPE) %>
+    </td>
+    <td>
+    <%= f.select(:category_id,ARRAY_CONTACT_INFO_CATEGORY) %>
+    </td>
+    <td>
+    <%= f.text_area :data, :size => "20x1" %>
+    </td>
+    <td>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+    	
+    </td>
+  </tr>
+
+<% end %>
+

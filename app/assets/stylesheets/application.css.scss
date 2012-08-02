@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+a.current {
+    
+  // background-color: yellow;
+      
+color: white;
+font-size: 14px;
+text-decoration: none;
+cursor: pointer;
+margin-right: 3px;
+// display: block;
+padding: 5px 12px;
+// float: left;
+// background-image: url('img/tab_selected_bg.png');
+background-position: bottom;
+background-repeat: repeat-x;
+background-color: #3186AF;
+}
+
+table {
+display: table;
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;
+}
+
+table.tableBase {
+border-collapse: collapse;
+width: 100%;
+}
+
+tbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+
+tr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+.borderBase {
+border: solid 1px #D1D1D1;
+}
+
+td, th {
+display: table-cell;
+vertical-align: inherit;
+}

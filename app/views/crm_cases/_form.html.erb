@@ -1,0 +1,25 @@
+<%= form_for(@crm_case) do |f| %>
+  <% if @crm_case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@crm_case.errors.count, "error") %> prohibited this crm_case from being saved:</h2>
+
+      <ul>
+      <% @crm_case.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :isClosed %><br />
+    <%= f.text_field :isClosed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

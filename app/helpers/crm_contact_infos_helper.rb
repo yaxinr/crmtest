@@ -1,0 +1,2 @@
+module CrmContactInfosHelper
+end

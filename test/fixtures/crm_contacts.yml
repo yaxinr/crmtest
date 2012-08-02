@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tenant: 
+  is_company: 
+  notes: MyText
+  title: MyString
+  first_name: MyString
+  last_name: MyString
+  company_name: MyString
+  industry: MyString
+  status_id: 
+  company_id: 1
+
+two:
+  tenant: 
+  is_company: 
+  notes: MyText
+  title: MyString
+  first_name: MyString
+  last_name: MyString
+  company_name: MyString
+  industry: MyString
+  status_id: 
+  company_id: 1

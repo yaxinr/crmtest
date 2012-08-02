@@ -1,0 +1,14 @@
+<table id="taskTable" class="tableBase" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>Category</th>
+    <th>Title</br>Deadline</th>
+    <th>Entity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<%= render case when @EntityObject then @EntityObject.tasks else Task.all end %>
+</table>
+
+<h2>Add:</h2>
+<%= render :partial => "tasks/formForContact" %>

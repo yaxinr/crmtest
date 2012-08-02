@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Responsible</th>
+    <th>Crm contact</th>
+    <th>Bid currency</th>
+    <th>Bid value</th>
+    <th>Bid type</th>
+    <th>Deal milestone</th>
+    <th>Tenant</th>
+    <th>Expected close date</th>
+    <th>Per period value</th>
+    <th>Deal milestone probability</th>
+    <th>Actual close date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @deals.each do |deal| %>
+  <tr>
+    <td><%= deal.title %></td>
+    <td><%= deal.description %></td>
+    <td><%= deal.responsible %></td>
+    <td><%= deal.crm_contact_id %></td>
+    <td><%= deal.bid_currency %></td>
+    <td><%= deal.bid_value %></td>
+    <td><%= deal.bid_type %></td>
+    <td><%= deal.deal_milestone_id %></td>
+    <td><%= deal.expected_close_date %></td>
+    <td><%= deal.per_period_value %></td>
+    <td><%= deal.deal_milestone_probability %></td>
+    <td><%= deal.actual_close_date %></td>
+    <td><%= link_to 'Show', deal %></td>
+    <td><%= link_to 'Edit', ( edit_deal_path(deal)) %></td>
+    <td><%= link_to 'Destroy', deal, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<h1>Add</h1>
+
+<%= render 'form' %>

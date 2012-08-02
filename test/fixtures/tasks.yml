@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  deadline: 2012-06-22 16:59:53
+  responsible: 
+  contact: 
+  is_closed: 1
+  tenant: 
+  entity_type: 1
+  entity: 
+  category: 
+
+two:
+  title: MyString
+  description: MyText
+  deadline: 2012-06-22 16:59:53
+  responsible: 
+  contact: 
+  is_closed: 1
+  tenant: 
+  entity_type: 1
+  entity: 
+  category: 

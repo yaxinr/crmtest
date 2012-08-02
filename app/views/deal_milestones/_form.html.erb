@@ -1,0 +1,45 @@
+<%= form_for(@deal_milestone) do |f| %>
+  <% if @deal_milestone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deal_milestone.errors.count, "error") %> prohibited this deal_milestone from being saved:</h2>
+
+      <ul>
+      <% @deal_milestone.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :sort_order %><br />
+    <%= f.number_field :sort_order %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :probability %><br />
+    <%= f.number_field :probability %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.number_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :tenant %><br />
+    <%= f.text_field :tenant %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

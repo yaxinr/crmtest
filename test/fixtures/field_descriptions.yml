@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tenant: 
+  label: MyString
+  type: 
+  sort_order: 1
+  mask: MyString
+  entity_type: 1
+
+two:
+  tenant: 
+  label: MyString
+  type: 
+  sort_order: 1
+  mask: MyString
+  entity_type: 1

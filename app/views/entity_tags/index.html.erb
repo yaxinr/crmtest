@@ -1,0 +1,27 @@
+<h1>Listing entity_tags</h1>
+
+<table>
+  <tr>
+    <th>Entity</th>
+    <th>Entity type</th>
+    <th>Tag</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entity_tags.each do |entity_tag| %>
+  <tr>
+    <td><%= entity_tag.entity %></td>
+    <td><%= entity_tag.entity_type %></td>
+    <td><%= entity_tag.tag %></td>
+    <td><%= link_to 'Show', entity_tag %></td>
+    <td><%= link_to 'Edit', edit_entity_tag_path(entity_tag) %></td>
+    <td><%= link_to 'Destroy', entity_tag, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entity tag', new_entity_tag_path %>

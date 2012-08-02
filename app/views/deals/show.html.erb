@@ -1,0 +1,72 @@
+<%= link_to 'Edit', edit_deal_path(@deal) %> |
+<%= link_to 'Back', deals_path %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @deal.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @deal.description %>
+</p>
+
+<p>
+  <b>Responsible:</b>
+  <%= @deal.responsible %>
+</p>
+
+<p>
+  <b>Crm contact:</b>
+  <%= @deal.crm_contact_id %>
+</p>
+
+<p>
+  <b>Bid currency:</b>
+  <%= @deal.bid_currency %>
+</p>
+
+<p>
+  <b>Bid value:</b>
+  <%= @deal.bid_value %>
+</p>
+
+<p>
+  <b>Bid type:</b>
+  <%= @deal.bid_type %>
+</p>
+
+<p>
+  <b>Deal milestone:</b>
+  <%= @deal.deal_milestone_id %>
+</p>
+
+<p>
+  <b>Expected close date:</b>
+  <%= @deal.expected_close_date %>
+</p>
+
+<p>
+  <b>Per period value:</b>
+  <%= @deal.per_period_value %>
+</p>
+
+<p>
+  <b>Deal milestone probability:</b>
+  <%= @deal.deal_milestone_probability %>
+</p>
+
+<p>
+  <b>Actual close date:</b>
+  <%= @deal.actual_close_date %>
+</p>
+<div id="tags">
+<%= render "entity_tags/list" %>
+</div>
+<%= link_to "Events", (crm_case_path + relationship_events_path), :remote => true %>
+<%= link_to "Tasks", (crm_case_path + tasks_path), :method => "get", :remote => true %>
+<%= link_to "Participants", (crm_case_path + entity_contacts_path), :method => "get", :remote => true %>
+<div id="entity_detail">
+<%= render "relationship_events/events" %>
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  entity: 
+  EntityType: 1
+  crm_contact: 
+
+two:
+  entity: 
+  EntityType: 1
+  crm_contact: 

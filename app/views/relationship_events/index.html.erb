@@ -1,0 +1,35 @@
+<h1>Listing relationship_events</h1>
+
+<table>
+  <tr>
+    <th>Crm contact</th>
+    <th>Content</th>
+    <th>Tenant</th>
+    <th>Entity type</th>
+    <th>Entityreference</th>
+    <th>Category</th>
+    <th>Have files</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @relationship_events.each do |relationship_event| %>
+  <tr>
+    <td><%= relationship_event.crm_contact_id %></td>
+    <td><%= relationship_event.content %></td>
+    <td><%= relationship_event.tenant_id %></td>
+    <td><%= relationship_event.entity_type %></td>
+    <td><%= relationship_event.entity_id %></td>
+    <td><%= relationship_event.category_id %></td>
+    <td><%= relationship_event.have_files %></td>
+    <td><%= link_to 'Show', relationship_event %></td>
+    <td><%= link_to 'Edit', edit_relationship_event_path(relationship_event) %></td>
+    <td><%= link_to 'Destroy', relationship_event, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Relationship event', new_relationship_event_path %>

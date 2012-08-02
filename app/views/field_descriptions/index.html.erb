@@ -1,0 +1,33 @@
+<h1>Listing field_descriptions</h1>
+
+<table>
+  <tr>
+    <th>Tenant</th>
+    <th>Label</th>
+    <th>Type</th>
+    <th>Sort order</th>
+    <th>Mask</th>
+    <th>Entity type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @field_descriptions.each do |field_description| %>
+  <tr>
+    <td><%= field_description.tenant %></td>
+    <td><%= field_description.label %></td>
+    <td><%= field_description.type %></td>
+    <td><%= field_description.sort_order %></td>
+    <td><%= field_description.mask %></td>
+    <td><%= field_description.entity_type %></td>
+    <td><%= link_to 'Show', field_description %></td>
+    <td><%= link_to 'Edit', edit_field_description_path(field_description) %></td>
+    <td><%= link_to 'Destroy', field_description, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Field description', new_field_description_path %>

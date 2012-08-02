@@ -1,0 +1,44 @@
+<%= form_for(@crm_contact) do |f| %>
+  <% if @crm_contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@crm_contact.errors.count, "error") %> prohibited this crm_contact from being saved:</h2>
+
+      <ul>
+      <% @crm_contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.select(:is_company,ARRAY_CONTACT_TYPE) %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label 'Contact type' %><br />
+    <%= f.collection_select(:status_id, ListItem.all, :id, :title) %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.collection_select(:company_id, CrmContact.all,:id, :title, :prompt => true ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

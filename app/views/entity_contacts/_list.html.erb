@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Category</th>
+    <th>Data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+  <% @entity_contacts.each do |entity_contact| %>
+<tr>
+    <td><%= CrmContact.find(entity_contact.crm_contact_id).title %></td>
+    <td><%= link_to 'Destroy', [@EntityObject, entity_contact], confirm: 'Are you sure?', method: :delete, remote: true %></td>
+  </tr>
+  </tr>
+<% end %>
+
+</table>
+<%= render 'entity_contacts/form' %>

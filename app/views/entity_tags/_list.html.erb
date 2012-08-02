@@ -1,0 +1,5 @@
+<% @entity_tags.each do |entity_tag| %>
+    <%= Tag.find(entity_tag.tag_id).title %> <%= link_to 'x', entity_tag, method: :delete, remote: true %>    
+<% end %>
+
+<%= render 'entity_tags/form' %>

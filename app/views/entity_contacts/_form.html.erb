@@ -1,0 +1,9 @@
+<%= form_for([@EntityObject, @EntityObject.entity_contacts.build], remote: true) do |f| %>
+  <div class="field">
+    <%= f.label :crm_contact %><br />
+    <%= f.collection_select :crm_contact_id, CrmContact.all, :id, :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module RelationshipEventsHelper
+end

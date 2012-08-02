@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Value:</b>
+  <%= @field_value.value %>
+</p>
+
+<p>
+  <b>Entity:</b>
+  <%= @field_value.entity %>
+</p>
+
+<p>
+  <b>Tenant:</b>
+  <%= @field_value.tenant %>
+</p>
+
+<p>
+  <b>Field:</b>
+  <%= @field_value.field %>
+</p>
+
+<p>
+  <b>Entity type:</b>
+  <%= @field_value.entity_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_field_value_path(@field_value) %> |
+<%= link_to 'Back', field_values_path %>

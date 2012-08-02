@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Color:</b>
+  <%= @deal_milestone.color %>
+</p>
+
+<p>
+  <b>Sort order:</b>
+  <%= @deal_milestone.sort_order %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @deal_milestone.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @deal_milestone.description %>
+</p>
+
+<p>
+  <b>Probability:</b>
+  <%= @deal_milestone.probability %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @deal_milestone.status %>
+</p>
+
+<p>
+  <b>Tenant:</b>
+  <%= @deal_milestone.tenant %>
+</p>
+
+
+<%= link_to 'Edit', edit_deal_milestone_path(@deal_milestone) %> |
+<%= link_to 'Back', deal_milestones_path %>

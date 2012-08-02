@@ -1,0 +1,26 @@
+<h1>контакты</h1>
+<%= link_to 'New Crm contact', new_crm_contact_path %>
+
+<table id="companyTable" class="tableBase" cellpadding="4" cellspacing="0">
+<tr>
+    <th>Type</th>
+    <th>Title</th>
+    <th>Info</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<tbody>
+<% @crm_contacts.each do |crm_contact| %>
+  <tr>
+    <td class="borderBase" style="width:40px;"><%= crm_contact.is_company_text %></td>
+    <td class="borderBase" style="width:50%;"><%= link_to crm_contact.title, crm_contact %> <% if crm_contact.company %> </br><%= link_to crm_contact.company_title, crm_contact.company %> <% end %></td>
+    <td style="width:90px;"><% if crm_contact.phone %><%= crm_contact.phone.data %><% else %>add phone<% end %>
+    	
+    	</br><% if crm_contact.email %><%= mail_to crm_contact.email.data %><% else %>add email<% end %></td>
+    <td style="width:40px;"><%= link_to 'Edit', edit_crm_contact_path(crm_contact) %></td>
+    <td style="width:40px;"><%= link_to 'Destroy', crm_contact, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>

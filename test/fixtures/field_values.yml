@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  value: MyString
+  entity: 
+  tenant: 
+  field: 
+  entity_type: 1
+
+two:
+  value: MyString
+  entity: 
+  tenant: 
+  field: 
+  entity_type: 1

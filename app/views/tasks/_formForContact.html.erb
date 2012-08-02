@@ -1,0 +1,7 @@
+<%= form_for([@EntityObject, case when @task then @task else @EntityObject.tasks.build  end], :remote => true) do |f| %>
+
+<%= render :partial => 'tasks/f',  :locals => { :f => f } %>
+
+<% end %>
+
+<%= link_to 'Back', [@EntityObject, 'tasks'] , remote: true %>

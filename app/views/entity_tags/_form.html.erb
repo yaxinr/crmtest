@@ -1,0 +1,6 @@
+<%= form_for([@EntityObject, @EntityObject.entity_tags.build], :remote =>  true) do |f| %>
+    <%= f.collection_select :tag_id, Tag.all, :id, :title %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

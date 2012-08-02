@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tenant:</b>
+  <%= @field_description.tenant %>
+</p>
+
+<p>
+  <b>Label:</b>
+  <%= @field_description.label %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @field_description.type %>
+</p>
+
+<p>
+  <b>Sort order:</b>
+  <%= @field_description.sort_order %>
+</p>
+
+<p>
+  <b>Mask:</b>
+  <%= @field_description.mask %>
+</p>
+
+<p>
+  <b>Entity type:</b>
+  <%= @field_description.entity_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_field_description_path(@field_description) %> |
+<%= link_to 'Back', field_descriptions_path %>
